@@ -1,59 +1,38 @@
-# Recetario
+# Angular Avanzado · Módulo 7 · Build y despliegue desde cero
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.26.
+Una aplicación pequeña, el **Recetario**, que empieza recién salida de `ng new`. Sobre ella se mide el build de producción, se preparan entornos, se ponen budgets, se analiza qué hay dentro de cada fichero y se sirve el resultado como lo haría un servidor de verdad.
 
-## Development server
+## Órdenes
 
-To start a local development server, run:
-
-```bash
-ng serve
+```
+npm start                 # desarrollo, con el aviso DESARROLLO en la cabecera
+npm run build             # producción
+npm run build:pre         # preproducción: production + preproduccion
+npm run analizar          # build con mapas y stats.json, y el peso por paquete
+npm run analizar:mapa     # source-map-explorer sobre el último build de análisis
+npm run servir            # build de producción y servidor local en http://localhost:8080
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Etiquetas
 
-## Code scaffolding
+`git checkout <etiqueta>` deja el código en ese paso. `main` es el final. Después de cambiar de etiqueta, `npm install`.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Etiqueta               | Paso                                                                |
+| ---------------------- | ------------------------------------------------------------------- |
+| `paso-0-ng-new`        | Lo que genera `ng new`, sin tocar                                   |
+| `paso-1-partida`       | Inicio, Recetas, Detalle y Acerca de; tres rutas en diferido        |
+| `paso-2-entornos`      | `ng generate environments` y el contrato `Entorno`                  |
+| `paso-3-preproduccion` | La configuración `preproduccion`, que se combina con `production`   |
+| `paso-4-budgets`       | Budgets a medida                                                    |
+| `paso-5-analisis`      | Configuración `analisis`, `stats.json`, peso por paquete y mapas    |
+| `paso-6-lodash`        | Las novedades se ordenan con lodash: **el build no pasa**           |
+| `paso-7-sin-lodash`    | Ordenadas sin librería                                              |
+| `paso-8-servidor`      | `despliegue/servidor.mjs`: rutas, caché, compresión y 404 de verdad |
 
-```bash
-ng generate component component-name
-```
+Ejercicios, que salen de `paso-8-servidor`:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+| Etiqueta                    | Qué es                                                 |
+| --------------------------- | ------------------------------------------------------ |
+| `ejercicio-1-mapas-ocultos` | Solución del ejercicio 1: mapas sin `sourceMappingURL` |
+| `ejercicio-2-problema`      | El punto de partida del ejercicio 2: el build no pasa  |
+| `ejercicio-2-solucion`      | Su solución                                            |
