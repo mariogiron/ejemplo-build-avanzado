@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "Tortilla de patatas",
+    "minutos": 40,
+    "ingredientes": ["patatas", "huevos", "cebolla", "aceite", "sal"]
+  },
+  {
+    "id": 2,
+    "nombre": "Gazpacho",
+    "minutos": 15,
+    "ingredientes": ["tomates", "pepino", "pimiento", "ajo", "aceite", "vinagre"]
+  },
+  {
+    "id": 3,
+    "nombre": "Lentejas estofadas",
+    "minutos": 60,
+    "ingredientes": ["lentejas", "chorizo", "zanahoria", "patata", "pimentón"]
+  },
+  {
+    "id": 4,
+    "nombre": "Pisto manchego",
+    "minutos": 50,
+    "ingredientes": ["calabacín", "berenjena", "pimiento", "tomate", "cebolla"]
+  },
+  {
+    "id": 5,
+    "nombre": "Arroz con leche",
+    "minutos": 45,
+    "ingredientes": ["arroz", "leche", "azúcar", "canela", "limón"]
+  }
+]
