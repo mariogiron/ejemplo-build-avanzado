@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "build:pre": "ng build -c production,preproduccion",
+    "analizar": "ng build -c production,analisis && node herramientas/peso-por-paquete.mjs",
+    "analizar:mapa": "source-map-explorer \"dist/recetario/browser/*.js\" --no-border-checks",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -26,6 +28,7 @@
     "@angular/cli": "^21.2.26",
     "@angular/compiler-cli": "^21.2.0",
     "prettier": "^3.8.1",
+    "source-map-explorer": "^2.5.3",
     "typescript": "~5.9.2"
   }
 }

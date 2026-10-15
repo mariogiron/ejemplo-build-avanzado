@@ -91,6 +91,12 @@
                   "with": "src/environments/environment.preproduccion.ts"
                 }
               ]
+            },
+            "analisis": {
+              "sourceMap": true,
+              "namedChunks": true,
+              "statsJson": true,
+              "budgets": []
             }
           },
           "defaultConfiguration": "production"
