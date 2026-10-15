@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import _ from 'lodash';
 
 /** Lo nuevo de la aplicación. Se escribe en cualquier orden. */
 const NOVEDADES = [
@@ -21,5 +22,6 @@ const NOVEDADES = [
   `,
 })
 export class Inicio {
-  protected readonly novedades = NOVEDADES;
+  /** De la más reciente a la más antigua. */
+  protected readonly novedades = _.orderBy(NOVEDADES, 'fecha', 'desc');
 }
