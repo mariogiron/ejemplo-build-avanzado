@@ -1,6 +1,7 @@
 import { httpResource } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { environment } from '../../environments/environment';
 import { Receta } from '../receta';
 
 @Component({
@@ -21,6 +22,6 @@ import { Receta } from '../receta';
   `,
 })
 export class Recetas {
-  /** recetas.json está en public/: se copia tal cual al build. */
-  protected readonly recetas = httpResource<Receta[]>(() => '/recetas.json');
+  /** La dirección sale del entorno. recetas.json está en public/: se copia tal cual al build. */
+  protected readonly recetas = httpResource<Receta[]>(() => environment.datos);
 }

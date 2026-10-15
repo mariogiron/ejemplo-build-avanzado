@@ -1,6 +1,7 @@
 import { httpResource } from '@angular/common/http';
 import { Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { environment } from '../../environments/environment';
 import { Receta } from '../receta';
 
 @Component({
@@ -24,7 +25,7 @@ export class DetalleReceta {
   /** El :id de la ruta, gracias a withComponentInputBinding. */
   readonly id = input.required<string>();
 
-  private readonly recetas = httpResource<Receta[]>(() => '/recetas.json');
+  private readonly recetas = httpResource<Receta[]>(() => environment.datos);
   protected readonly receta = computed(() =>
     this.recetas.value()?.find((receta) => receta.id === Number(this.id())),
   );

@@ -16,6 +16,13 @@ nav a {
 nav a.activo {
   font-weight: bold;
 }
+.aviso-entorno {
+  margin-left: auto;
+  padding: 2px 10px;
+  background: #fde047;
+  color: #000;
+  font-weight: bold;
+}
 main {
   padding: 8px 24px;
 }

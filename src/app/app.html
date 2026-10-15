@@ -7,6 +7,9 @@
     <a routerLink="/recetas" routerLinkActive="activo">Recetas</a>
     <a routerLink="/acerca" routerLinkActive="activo">Acerca de</a>
   </nav>
+  @if (entorno.aviso) {
+    <span class="aviso-entorno">{{ entorno.aviso }}</span>
+  }
 </header>
 
 <main>
