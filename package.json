@@ -8,6 +8,7 @@
     "build:pre": "ng build -c production,preproduccion",
     "analizar": "ng build -c production,analisis && node herramientas/peso-por-paquete.mjs",
     "analizar:mapa": "source-map-explorer \"dist/recetario/browser/*.js\" --no-border-checks",
+    "servir": "ng build && node despliegue/servidor.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
