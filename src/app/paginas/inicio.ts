@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import _ from 'lodash';
 
 /** Lo nuevo de la aplicación. Se escribe en cualquier orden. */
 const NOVEDADES = [
@@ -23,5 +22,5 @@ const NOVEDADES = [
 })
 export class Inicio {
   /** De la más reciente a la más antigua. */
-  protected readonly novedades = _.orderBy(NOVEDADES, 'fecha', 'desc');
+  protected readonly novedades = [...NOVEDADES].sort((a, b) => b.fecha.localeCompare(a.fecha));
 }
