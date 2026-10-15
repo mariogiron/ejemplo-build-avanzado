@@ -56,8 +56,14 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "280kB",
+                  "maximumError": "320kB"
+                },
+                {
+                  "type": "bundle",
+                  "name": "detalle-receta",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
                 },
                 {
                   "type": "anyComponentStyle",
