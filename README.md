@@ -15,7 +15,7 @@ npm run servir            # build de producción y servidor local en http://loca
 
 ## Etiquetas
 
-`git checkout <etiqueta>` deja el código en ese paso. `main` es el final. Después de cambiar de etiqueta, `npm install`.
+`git checkout -f <etiqueta>` deja el código en ese paso. `main` es el paso 8 con este README. Después de cambiar a una etiqueta con otras dependencias (pasos 5, 6 y 7), `npm ci`.
 
 | Etiqueta               | Paso                                                                |
 | ---------------------- | ------------------------------------------------------------------- |
@@ -36,3 +36,9 @@ Ejercicios, que salen de `paso-8-servidor`:
 | `ejercicio-1-mapas-ocultos` | Solución del ejercicio 1: mapas sin `sourceMappingURL` |
 | `ejercicio-2-problema`      | El punto de partida del ejercicio 2: el build no pasa  |
 | `ejercicio-2-solucion`      | Su solución                                            |
+
+Para ampliar, también desde `paso-8-servidor`:
+
+| Etiqueta                  | Qué es                                              |
+| ------------------------- | --------------------------------------------------- |
+| `ampliar-solo-desarrollo` | Providers que solo viajan en el build de desarrollo |
