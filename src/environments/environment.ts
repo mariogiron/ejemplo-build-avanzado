@@ -5,4 +5,5 @@ export const environment: Entorno = {
   nombre: 'produccion',
   datos: '/recetas.json',
   aviso: null,
+  proveedores: [],
 };
